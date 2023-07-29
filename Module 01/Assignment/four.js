@@ -21,4 +21,4 @@ calculateGrade=(marks)=>{
 
 var result=calculateGrade(number);
 
-document.write(result);
+console.log(result);
