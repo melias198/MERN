@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="changeContentButton">Click Me!</button>
+    <div id="contentDiv">Click the button.</div>
+
+    <script>
+
+        const button = document.getElementById("changeContentButton");
+        const contentDiv = document.getElementById("contentDiv");
+
+        button.addEventListener("click", () => {
+            const Message = "Button clicked!";
+            contentDiv.textContent = Message;
+        });
+
+
+    </script>
+</body>
+
+</html>
