@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM Document</title>
+</head>
+<body>
+
+    <button onclick="Demo4()">Click</button>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <script>
+
+        function Demo()
+        {
+          // var info=document.title;
+          // var info=document.URL;
+          // var info=document.lastModified;
+          // var info=document.cookie;
+          // var info=document.domain;
+            document.getElementsByTagName('p')[0].innerHTML=info;
+        }
+
+        function Demo2()
+        {
+            document.open('text/html','replace');
+            document.write('<h2>My Name is Elias.</h2>')
+            document.close();
+        }
+
+        function Demo3()
+        {
+            var w=window.open();
+            w.document.open();
+            w.document.write("Hello,How Are You?");
+            w.document.close();
+        }
+
+        function Demo4()
+        {
+            var MyTagElemets=document.getElementsByTagName('p');
+            var n=MyTagElemets.length;
+            alert(n);
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Common Event</title>
+</head>
+<body onload="MyEvent('Loaded!')">
+
+    <button onclick="MyEvent('Clicked!')">Click</button>
+    <button onmouseover="MyEvent('Mouse Overed!')">Mouse Over</button>
+    <button onmouseout="MyEvent('Mouse Outed!')">Mouse Out</button>
+
+    <input onchange="MyEvent('Changed!')"/><br/>
+    <input onkeydown="MyEvent('Key Down!')"/><br/>
+    <input onkeyup="MyEvent('Key Up!')"/><br/>
+
+
+
+    <script>
+
+        function MyEvent(msg)
+        {
+            console.log(msg);
+        }
+
+    </script>
+    
+</body>
+</html>

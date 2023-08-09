@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulated</title>
+</head>
+<body>
+
+    <h1 id="MyId"></h1>
+
+    <h1 class="MyClass"></h1>
+    <h6 class="MyClass"></h6>
+    <button class="MyClass"></button>
+
+    <h1 name="MyName"></h1>
+    <h6 name="MyName"></h6>
+    <button name="MyName"></button>
+
+    <p>My name is Elias.</p>
+    <p>I'm from Cox's Bazar</p>
+    <p>I Living Pekua</p>
+
+
+
+    <script>
+
+        var MyIdElement=document.getElementById('MyId');
+        MyIdElement.innerHTML="Hi! I'm DOM";
+
+        var MyClassElements=document.getElementsByClassName('MyClass');
+        MyClassElements[2].innerHTML="This is button Dom";
+
+
+        var MyNameElemets=document.getElementsByName('MyName');
+        MyNameElemets[1].innerHTML="This name h6";
+
+        var MyTagElemets=document.getElementsByTagName('p');
+        MyTagElemets[2].innerHTML="I Living Chittagong";
+
+    </script>
+    
+</body>
+</html>

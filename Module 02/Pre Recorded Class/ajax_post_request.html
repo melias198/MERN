@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX FETCH API POST REQUEST</title>
+</head>
+<body>
+
+    <button onclick="FetchPostData()">FetchPostData</button>
+
+    <script>
+
+        function FetchPostData()
+        {
+            var URL="https://crud.teamrabbil.com/api/v1/CreateProduct";
+            var data={Img: 'A',ProductCode: '7B3',ProductName:'Shirt',Qty: '10',TotalPrice:'1000',UnitPrice: '100'};
+            var Config={
+                method: 'POST',
+                headers: {'Accept': 'application/json','Content-Type': 'application/json'},
+                body: JSON.stringify(data)
+            };
+
+            fetch(URL,Config).then(response=>response.json()).then(result=>console.log(result))
+            .catch(error=>console.log('error',error));
+
+        }
+
+    </script>
+    
+</body>
+</html>

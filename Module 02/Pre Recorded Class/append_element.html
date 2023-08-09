@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creat And Append Element</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <ol id="MyList"></ol><br>
+    <input id="MyInput"><br>
+    <button onclick="AppendList()">Add To List</button>
+
+    <script>
+
+        function AppendList()
+        {
+            var input=document.getElementById('MyInput').value;
+
+            var Item=document.createElement('li');
+            Item.innerHTML=input;
+
+            var MyItem=document.getElementById('MyList');
+            MyItem.appendChild(Item);
+        }
+
+    </script>
+</body>
+</html>

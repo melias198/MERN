@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Query Selector</title>
+</head>
+<body>
+
+    <h1>Hi!</h1>
+    <h2 id="MyId">Hello!</h2>
+    <h4 class="MyClass">What's up?</h4>
+    <h6 name="MyName">How're you?</h6>
+    <input placeholder="...">
+    <button onclick="Change()">Change</button>
+
+    <script>
+
+        Change=()=>{
+            document.querySelector('h1').innerHTML="Hi,I'm Elias.";
+            document.querySelector('#MyId').innerHTML="Hello,Morning!";
+            document.querySelector('.MyClass').innerHTML="How's going?";
+            document.querySelector('h6[name="MyName"]').innerHTML="I'm fine.";
+            document.querySelector('input').placeholder="New Placeholder";
+        }
+
+    </script>
+    
+</body>
+</html>
