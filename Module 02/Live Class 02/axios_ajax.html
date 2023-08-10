@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX USINF AXIOS</title>
+</head>
+<body>
+
+    <button onclick="PromisesUsingAxios2()">Click</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+         let URL="https://crud.teamrabbil.com/api/v1/ReadProduct";
+
+         //Fetch using async await
+         async function AsyncUsingAxios()
+         {
+            let res=await axios.get(URL);
+            let jsonData=await res.data;
+            document.write(JSON.stringify(jsonData));
+         }
+
+
+         //Fetch using promises
+         function PromisesUsingAxios()
+         {
+            axios.get(URL).then(res=>res.data).then(jsonData=>document.write(JSON.stringify(jsonData)));
+         }
+
+
+         //Fetch using promises short form
+         function PromisesUsingAxios2()
+         {
+            axios.get(URL).then((res)=>{
+                let jsonData=res.data;
+                document.write(JSON.stringify(jsonData));
+            })
+         }
+
+    </script>
+    
+</body>
+</html>

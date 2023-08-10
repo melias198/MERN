@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builtin Ajax Practice</title>
+</head>
+<body>
+
+    <button onclick="RequestUsingPromises()">Click</button>
+
+    <script>
+        let URL="https://crud.teamrabbil.com/api/v1/ReadProduct";
+
+
+        // Fetch using async await
+        async function RequestUsingAsync(){
+            let res= await fetch(URL);
+            let jsonData=await res.json();
+            document.write(JSON.stringify(jsonData));
+        }
+
+
+        //Fetch using promises
+        function RequestUsingPromises(){
+            fetch(URL).then(res=>res.json()).then(jsonData=>document.write(JSON.stringify(jsonData)));
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

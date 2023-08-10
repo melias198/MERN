@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Access</title>
+</head>
+<body>
+    <button onclick="onCamera()">OnCamera</button><br>
+    
+    <video height="300" width="300" id="vid" autoplay></video>
+
+    <script>
+
+        function onCamera()
+        {
+
+        let videoCamera=document.getElementById('vid');
+
+        navigator.mediaDevices.getUserMedia({
+            audio: true,
+            video: true,
+        }).then(function(stream){videoCamera.srcObject=stream;})
+        }
+
+    </script>
+</body>
+</html>
